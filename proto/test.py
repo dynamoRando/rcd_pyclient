@@ -16,6 +16,16 @@ def run():
     print("Greeter client received: " + response.replyEchoMessage)
 
 
+def test_create_db():
+    auth = cdata_pb2.AuthRequest(userName="tester", pw = "1234")
+    request = cdata_pb2.CreateUserDatabaseRequest(authentication=auth, databaseName = "test_create_db.db")
+
+    with grpc.insecure_channel('localhost:50051') as channel:
+        stub = cdata_pb2_grpc.SQLClientStub(channel)
+        response = stub.CreateUserDatabase(request)
+    print("Greeter client received: " + str(response.isCreated))
+
 if __name__ == '__main__':
     logging.basicConfig()
     run()
+    test_create_db()
