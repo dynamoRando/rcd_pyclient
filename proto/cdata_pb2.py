@@ -14,10 +14,16 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0b\x63\x64\x61ta.proto\x12\x05\x63\x64\x61ta\"|\n\x1eSendParticipantContractRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x18\n\x10participantAlias\x18\x03 \x01(\t\"p\n\x1cSendParticipantContractReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x0e\n\x06isSent\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"\x93\x01\n\x12StatementResultset\x12\x0f\n\x07isError\x18\x01 \x01(\x08\x12\x15\n\rresultMessage\x18\x02 \x01(\t\x12\x1c\n\x14numberOfRowsAffected\x18\x03 \x01(\x04\x12\x18\n\x04rows\x18\x04 \x03(\x0b\x32\n.cdata.Row\x12\x1d\n\x15\x65xecutionErrorMessage\x18\x05 \x01(\t\"]\n\x19\x43reateUserDatabaseRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\"n\n\x17\x43reateUserDatabaseReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x11\n\tisCreated\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"\x82\x01\n\x12\x45xecuteReadRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x14\n\x0csqlStatement\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x61tabaseType\x18\x04 \x01(\r\"\x88\x01\n\x10\x45xecuteReadReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x17\n\x0ftotalResultsets\x18\x02 \x01(\x04\x12*\n\x07results\x18\x03 \x03(\x0b\x32\x19.cdata.StatementResultset\"\x83\x01\n\x13\x45xecuteWriteRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x14\n\x0csqlStatement\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x61tabaseType\x18\x04 \x01(\r\"u\n\x11\x45xecuteWriteReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x19\n\x11totalRowsAffected\x18\x03 \x01(\r\"f\n\x0fHasTableRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x11\n\ttableName\x18\x03 \x01(\t\"R\n\rHasTableReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x10\n\x08hasTable\x18\x02 \x01(\x08\"\xa0\x01\n\x17GenerateContractRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x10\n\x08hostName\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x61tabaseName\x18\x04 \x01(\t\x12\x1c\n\x14remoteDeleteBehavior\x18\x05 \x01(\r\"o\n\x15GenerateContractReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"\x89\x01\n\x1eSetLogicalStoragePolicyRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x11\n\ttableName\x18\x03 \x01(\t\x12\x12\n\npolicyMode\x18\x04 \x01(\r\"v\n\x1cSetLogicalStoragePolicyReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"u\n\x1eGetLogicalStoragePolicyRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x11\n\ttableName\x18\x03 \x01(\t\"c\n\x1cGetLogicalStoragePolicyReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x12\n\npolicyMode\x18\x02 \x01(\r\"\x9d\x01\n\x1d\x45xecuteCooperativeReadRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x14\n\x0csqlStatement\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x61tabaseType\x18\x04 \x01(\r\x12\x0e\n\x06tables\x18\x05 \x03(\t\"\x93\x01\n\x1b\x45xecuteCooperativeReadReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x17\n\x0ftotalResultsets\x18\x02 \x01(\x04\x12*\n\x07results\x18\x03 \x03(\x0b\x32\x19.cdata.StatementResultset\"\xb4\x01\n\x1e\x45xecuteCooperativeWriteRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x14\n\x0csqlStatement\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x61tabaseType\x18\x04 \x01(\r\x12\r\n\x05\x61lias\x18\x05 \x01(\t\x12\x15\n\rparticipantId\x18\x06 \x01(\t\"\x80\x01\n\x1c\x45xecuteCooperativeWriteReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x19\n\x11totalRowsAffected\x18\x03 \x01(\r\"\x8a\x01\n\x15\x41\x64\x64ParticipantRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\r\n\x05\x61lias\x18\x03 \x01(\t\x12\x12\n\nip4Address\x18\x04 \x01(\t\x12\x0c\n\x04port\x18\x05 \x01(\r\"m\n\x13\x41\x64\x64ParticipantReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"I\n\x1bViewPendingContractsRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\"p\n\x19ViewPendingContractsReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\"\n\tcontracts\x18\x02 \x03(\x0b\x32\x0f.cdata.Contract\"]\n\x1c\x41\x63\x63\x65ptPendingContractRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x11\n\thostAlias\x18\x02 \x01(\t\"t\n\x1a\x41\x63\x63\x65ptPendingContractReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"]\n\x1cRejectPendingContractRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x11\n\thostAlias\x18\x02 \x01(\t\"t\n\x1aRejectPendingContractReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"e\n!EnableCoooperativeFeaturesRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\"y\n\x1f\x45nableCoooperativeFeaturesReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"\xa5\x01\n\x12\x43reateTableRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61tabaseGUID\x18\x03 \x01(\t\x12\x11\n\ttableName\x18\x04 \x01(\t\x12$\n\x07\x63olumns\x18\x05 \x03(\x0b\x32\x13.cdata.ColumnSchema\"\xbf\x01\n\x11\x43reateTableResult\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x14\n\x0c\x64\x61tabaseName\x18\x03 \x01(\t\x12\x15\n\rresultMessage\x18\x04 \x01(\t\x12\x12\n\ndatabaseId\x18\x05 \x01(\t\x12\x11\n\ttableName\x18\x06 \x01(\t\x12\x0f\n\x07tableId\x18\x07 \x01(\t\"\x86\x02\n\x10InsertRowRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12!\n\x05table\x18\x02 \x01(\x0b\x32\x12.cdata.TableSchema\x12\x1f\n\x06values\x18\x03 \x03(\x0b\x32\x0f.cdata.RowValue\x12\'\n\x0bmessageInfo\x18\x04 \x01(\x0b\x32\x12.cdata.MessageInfo\x12+\n\x0btransaction\x18\x05 \x01(\x0b\x32\x16.cdata.TransactionInfo\x12\r\n\x05rowId\x18\x06 \x01(\r\x12\x1d\n\x08hostInfo\x18\x07 \x01(\x0b\x32\x0b.cdata.Host\"\xcc\x01\n\x0fInsertRowResult\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x14\n\x0c\x64\x61tabaseName\x18\x03 \x01(\t\x12\x15\n\rresultMessage\x18\x04 \x01(\t\x12\x12\n\ndatabaseId\x18\x05 \x01(\t\x12\x11\n\ttableName\x18\x06 \x01(\t\x12\x0f\n\x07tableId\x18\x07 \x01(\t\x12\r\n\x05rowId\x18\x08 \x01(\r\"\x95\x02\n\x17UpdateRowInTableRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\'\n\x0bmessageInfo\x18\x02 \x01(\x0b\x32\x12.cdata.MessageInfo\x12\x14\n\x0c\x64\x61tabaseName\x18\x03 \x01(\t\x12\x12\n\ndatabaseId\x18\x04 \x01(\t\x12\x11\n\ttableName\x18\x05 \x01(\t\x12\x0f\n\x07tableId\x18\x06 \x01(\r\x12\x12\n\nwhereRowId\x18\x07 \x01(\r\x12\x14\n\x0cupdateColumn\x18\x08 \x01(\t\x12\x13\n\x0bupdateValue\x18\t \x01(\t\x12\x18\n\x10\x65xistingDataHash\x18\n \x01(\x0c\"\xf7\x01\n\x16UpdateRowInTableResult\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x14\n\x0c\x64\x61tabaseName\x18\x03 \x01(\t\x12\x12\n\ndatabaseId\x18\x04 \x01(\t\x12\x11\n\ttableName\x18\x05 \x01(\t\x12\x0f\n\x07tableId\x18\x06 \x01(\t\x12\x1c\n\x14numberOfRowsAffected\x18\x07 \x01(\r\x12\x15\n\rresultMessage\x18\x08 \x01(\t\x12\x13\n\x0bnewDataHash\x18\t \x01(\x0c\"\xe3\x01\n\x17GetRowsFromTableRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x12\n\ndatabaseId\x18\x03 \x01(\t\x12\x11\n\ttableName\x18\x04 \x01(\t\x12\x0f\n\x07tableId\x18\x05 \x01(\t\x12\x13\n\x0b\x63olumnNames\x18\x06 \x01(\t\x12&\n\rrowsWithValue\x18\x07 \x03(\x0b\x32\x0f.cdata.RowValue\x12\x11\n\toperation\x18\x08 \x01(\t\"\xfc\x01\n\x16GetRowsFromTableResult\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x14\n\x0c\x64\x61tabaseName\x18\x03 \x01(\t\x12\x12\n\ndatabaseId\x18\x04 \x01(\t\x12\x11\n\ttableName\x18\x05 \x01(\t\x12\x0f\n\x07tableId\x18\x06 \x01(\t\x12\x1c\n\x14numberOfRowsAffected\x18\x07 \x01(\r\x12\x15\n\rresultMessage\x18\x08 \x01(\t\x12\x18\n\x04rows\x18\t \x03(\x0b\x32\n.cdata.Row\"\xa9\x01\n GetRowFromPartialDatabaseRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x30\n\nrowAddress\x18\x02 \x01(\x0b\x32\x1c.cdata.RowParticipantAddress\x12\'\n\x0bMessageInfo\x18\x03 \x01(\x0b\x32\x12.cdata.MessageInfo\"\x98\x01\n\x1fGetRowFromPartialDatabaseResult\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x15\n\rresultMessage\x18\x03 \x01(\t\x12\x17\n\x03row\x18\x04 \x01(\x0b\x32\n.cdata.Row\"a\n\x13SaveContractRequest\x12!\n\x08\x63ontract\x18\x01 \x01(\x0b\x32\x0f.cdata.Contract\x12\'\n\x0bmessageInfo\x18\x02 \x01(\x0b\x32\x12.cdata.MessageInfo\";\n\x12SaveContractResult\x12\x0f\n\x07isSaved\x18\x01 \x01(\x08\x12\x14\n\x0c\x65rrorMessage\x18\x02 \x01(\t\"\xa1\x01\n!ParticipantAcceptsContractRequest\x12\'\n\x0bparticipant\x18\x01 \x01(\x0b\x32\x12.cdata.Participant\x12\x14\n\x0c\x63ontractGUID\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61tabaseName\x18\x03 \x01(\t\x12\'\n\x0bmessageInfo\x18\x04 \x01(\x0b\x32\x12.cdata.MessageInfo\"b\n ParticipantAcceptsContractResult\x12(\n contractAcceptanceIsAcknowledged\x18\x01 \x01(\x08\x12\x14\n\x0c\x65rrorMessage\x18\x02 \x01(\t\"\xac\x01\n#RemoveRowFromPartialDatabaseRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\'\n\x0bMessageInfo\x18\x02 \x01(\x0b\x32\x12.cdata.MessageInfo\x12\x30\n\nrowAddress\x18\x03 \x01(\x0b\x32\x1c.cdata.RowParticipantAddress\"\x82\x01\n\"RemoveRowFromPartialDatabaseResult\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x15\n\rresultMessage\x18\x03 \x01(\t\"\x8c\x02\n\x1fUpdateRowDataHashForHostRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\'\n\x0bMessageInfo\x18\x02 \x01(\x0b\x32\x12.cdata.MessageInfo\x12\x1d\n\x08hostInfo\x18\x03 \x01(\x0b\x32\x0b.cdata.Host\x12\x14\n\x0c\x64\x61tabaseName\x18\x04 \x01(\t\x12\x12\n\ndatabaseId\x18\x05 \x01(\t\x12\x11\n\ttableName\x18\x06 \x01(\t\x12\x0f\n\x07tableId\x18\x07 \x01(\r\x12\r\n\x05rowId\x18\x08 \x01(\r\x12\x18\n\x10updatedHashValue\x18\t \x01(\x0c\"i\n UpdateRowDataHashForHostResponse\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\"\xf0\x01\n\x1dNotifyHostOfRemovedRowRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\'\n\x0bMessageInfo\x18\x02 \x01(\x0b\x32\x12.cdata.MessageInfo\x12\x1d\n\x08hostInfo\x18\x03 \x01(\x0b\x32\x0b.cdata.Host\x12\x14\n\x0c\x64\x61tabaseName\x18\x04 \x01(\t\x12\x12\n\ndatabaseId\x18\x05 \x01(\t\x12\x11\n\ttableName\x18\x06 \x01(\t\x12\x0f\n\x07tableId\x18\x07 \x01(\r\x12\r\n\x05rowId\x18\x08 \x01(\r\"g\n\x1eNotifyHostOfRemovedRowResponse\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\"\xaa\x01\n\x0bTestRequest\x12\x16\n\x0erequestTimeUTC\x18\x01 \x01(\t\x12\x18\n\x10requestOriginURL\x18\x02 \x01(\t\x12\x18\n\x10requestOriginIP4\x18\x03 \x01(\t\x12\x18\n\x10requestOriginIP6\x18\x04 \x01(\t\x12\x19\n\x11requestPortNumber\x18\x05 \x01(\r\x12\x1a\n\x12requestEchoMessage\x18\x06 \x01(\t\";\n\tTestReply\x12\x14\n\x0creplyTimeUTC\x18\x01 \x01(\t\x12\x18\n\x10replyEchoMessage\x18\x02 \x01(\t\"u\n\x0bMessageInfo\x12\x16\n\x0eisLittleEndian\x18\x01 \x01(\x08\x12\x18\n\x10messageAddresses\x18\x02 \x03(\t\x12\x1f\n\x17messageGeneratedTimeUTC\x18\x03 \x01(\t\x12\x13\n\x0bmessageGUID\x18\x04 \x01(\t\"J\n\x0b\x41uthRequest\x12\x10\n\x08userName\x18\x01 \x01(\t\x12\n\n\x02pw\x18\x02 \x01(\t\x12\x0e\n\x06pwHash\x18\x03 \x01(\x0c\x12\r\n\x05token\x18\x04 \x01(\x0c\"e\n\nAuthResult\x12\x10\n\x08userName\x18\x01 \x01(\t\x12\r\n\x05token\x18\x02 \x01(\t\x12\x17\n\x0fisAuthenticated\x18\x03 \x01(\x08\x12\x1d\n\x15\x61uthenticationMessage\x18\x04 \x01(\t\"\x81\x01\n\x15\x43reateDatabaseRequest\x12)\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\'\n\x0bmessageInfo\x18\x02 \x01(\x0b\x32\x12.cdata.MessageInfo\x12\x14\n\x0c\x64\x61tabaseName\x18\x03 \x01(\t\"\x9e\x01\n\x14\x43reateDatabaseResult\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x14\n\x0c\x64\x61tabaseName\x18\x03 \x01(\t\x12\x15\n\rresultMessage\x18\x04 \x01(\t\x12\x12\n\ndatabaseId\x18\x05 \x01(\t\"\xa2\x01\n\x03Row\x12\r\n\x05rowId\x18\x01 \x01(\r\x12\x0f\n\x07tableId\x18\x02 \x01(\r\x12\x12\n\ndatabaseId\x18\x03 \x01(\t\x12\x1f\n\x06values\x18\x04 \x03(\x0b\x32\x0f.cdata.RowValue\x12\x14\n\x0cisRemoteable\x18\x05 \x01(\x08\x12\x30\n\x0eremoteMetadata\x18\x06 \x01(\x0b\x32\x18.cdata.RowRemoteMetadata\"S\n\x08RowValue\x12#\n\x06\x63olumn\x18\x01 \x01(\x0b\x32\x13.cdata.ColumnSchema\x12\x13\n\x0bisNullValue\x18\x02 \x01(\x08\x12\r\n\x05value\x18\x03 \x01(\x0c\"\x88\x01\n\x11RowRemoteMetadata\x12!\n\x19isRemoteOutOfSyncWithHost\x18\x01 \x01(\x08\x12\x1f\n\x17isHashOutOfSyncWithHost\x18\x02 \x01(\x08\x12\x17\n\x0fisRemoteDeleted\x18\x03 \x01(\x08\x12\x16\n\x0eisLocalDeleted\x18\x04 \x01(\x08\"\xaa\x01\n\x0c\x43olumnSchema\x12\x12\n\ncolumnName\x18\x01 \x01(\t\x12\x12\n\ncolumnType\x18\x02 \x01(\r\x12\x14\n\x0c\x63olumnLength\x18\x03 \x01(\r\x12\x12\n\nisNullable\x18\x04 \x01(\x08\x12\x0f\n\x07ordinal\x18\x05 \x01(\r\x12\x0f\n\x07tableId\x18\x06 \x01(\t\x12\x10\n\x08\x63olumnId\x18\x07 \x01(\t\x12\x14\n\x0cisPrimaryKey\x18\x08 \x01(\x08\"\xa4\x01\n\x08\x43ontract\x12\x14\n\x0c\x63ontractGUID\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12%\n\x06schema\x18\x03 \x01(\x0b\x32\x15.cdata.DatabaseSchema\x12\x17\n\x0f\x63ontractVersion\x18\x04 \x01(\t\x12\x1d\n\x08hostInfo\x18\x05 \x01(\x0b\x32\x0b.cdata.Host\x12\x0e\n\x06status\x18\x06 \x01(\r\"\x88\x01\n\x0bParticipant\x12\x17\n\x0fparticipantGUID\x18\x01 \x01(\t\x12\r\n\x05\x61lias\x18\x02 \x01(\t\x12\x12\n\nip4Address\x18\x03 \x01(\t\x12\x12\n\nip6Address\x18\x04 \x01(\t\x12\x1a\n\x12\x64\x61tabasePortNumber\x18\x05 \x01(\r\x12\r\n\x05token\x18\x06 \x01(\x0c\"}\n\x04Host\x12\x10\n\x08hostGUID\x18\x01 \x01(\t\x12\x10\n\x08hostName\x18\x02 \x01(\t\x12\x12\n\nip4Address\x18\x03 \x01(\t\x12\x12\n\nip6Address\x18\x04 \x01(\t\x12\x1a\n\x12\x64\x61tabasePortNumber\x18\x05 \x01(\r\x12\r\n\x05token\x18\x06 \x01(\x0c\"^\n\x0e\x44\x61tabaseSchema\x12\x14\n\x0c\x64\x61tabaseName\x18\x01 \x01(\t\x12\x12\n\ndatabaseId\x18\x02 \x01(\t\x12\"\n\x06tables\x18\x03 \x03(\x0b\x32\x12.cdata.TableSchema\"\x9f\x01\n\x0bTableSchema\x12\x11\n\ttableName\x18\x01 \x01(\t\x12\x0f\n\x07tableId\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61tabaseName\x18\x03 \x01(\t\x12\x12\n\ndatabaseId\x18\x04 \x01(\t\x12$\n\x07\x63olumns\x18\x05 \x03(\x0b\x32\x13.cdata.ColumnSchema\x12\x1c\n\x14logicalStoragePolicy\x18\x06 \x01(\r\"F\n\x0fTransactionInfo\x12\x1a\n\x12TransactionBatchId\x18\x01 \x01(\t\x12\x17\n\x0fTransactionMode\x18\x02 \x01(\r\"t\n\x15RowParticipantAddress\x12\r\n\x05rowId\x18\x01 \x01(\r\x12\x0f\n\x07tableId\x18\x02 \x01(\r\x12\x12\n\ndatabaseId\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x61tabaseName\x18\x04 \x01(\t\x12\x11\n\ttableName\x18\x05 \x01(\t2\x88\x0b\n\tSQLClient\x12\x30\n\x08IsOnline\x12\x12.cdata.TestRequest\x1a\x10.cdata.TestReply\x12V\n\x12\x43reateUserDatabase\x12 .cdata.CreateUserDatabaseRequest\x1a\x1e.cdata.CreateUserDatabaseReply\x12n\n\x1a\x45nableCoooperativeFeatures\x12(.cdata.EnableCoooperativeFeaturesRequest\x1a&.cdata.EnableCoooperativeFeaturesReply\x12\x41\n\x0b\x45xecuteRead\x12\x19.cdata.ExecuteReadRequest\x1a\x17.cdata.ExecuteReadReply\x12\x62\n\x16\x45xecuteCooperativeRead\x12$.cdata.ExecuteCooperativeReadRequest\x1a\".cdata.ExecuteCooperativeReadReply\x12\x44\n\x0c\x45xecuteWrite\x12\x1a.cdata.ExecuteWriteRequest\x1a\x18.cdata.ExecuteWriteReply\x12\x65\n\x17\x45xecuteCooperativeWrite\x12%.cdata.ExecuteCooperativeWriteRequest\x1a#.cdata.ExecuteCooperativeWriteReply\x12\x38\n\x08HasTable\x12\x16.cdata.HasTableRequest\x1a\x14.cdata.HasTableReply\x12\x65\n\x17SetLogicalStoragePolicy\x12%.cdata.SetLogicalStoragePolicyRequest\x1a#.cdata.SetLogicalStoragePolicyReply\x12\x65\n\x17GetLogicalStoragePolicy\x12%.cdata.GetLogicalStoragePolicyRequest\x1a#.cdata.GetLogicalStoragePolicyReply\x12P\n\x10GenerateContract\x12\x1e.cdata.GenerateContractRequest\x1a\x1c.cdata.GenerateContractReply\x12J\n\x0e\x41\x64\x64Participant\x12\x1c.cdata.AddParticipantRequest\x1a\x1a.cdata.AddParticipantReply\x12\x65\n\x17SendParticipantContract\x12%.cdata.SendParticipantContractRequest\x1a#.cdata.SendParticipantContractReply\x12^\n\x16ReviewPendingContracts\x12\".cdata.ViewPendingContractsRequest\x1a .cdata.ViewPendingContractsReply\x12_\n\x15\x41\x63\x63\x65ptPendingContract\x12#.cdata.AcceptPendingContractRequest\x1a!.cdata.AcceptPendingContractReply\x12_\n\x15RejectPendingContract\x12#.cdata.RejectPendingContractRequest\x1a!.cdata.RejectPendingContractReply2\xb3\x08\n\x0b\x44\x61taService\x12\x30\n\x08IsOnline\x12\x12.cdata.TestRequest\x1a\x10.cdata.TestReply\x12R\n\x15\x43reatePartialDatabase\x12\x1c.cdata.CreateDatabaseRequest\x1a\x1b.cdata.CreateDatabaseResult\x12L\n\x15\x43reateTableInDatabase\x12\x19.cdata.CreateTableRequest\x1a\x18.cdata.CreateTableResult\x12\x45\n\x12InsertRowIntoTable\x12\x17.cdata.InsertRowRequest\x1a\x16.cdata.InsertRowResult\x12Q\n\x10UpdateRowInTable\x12\x1e.cdata.UpdateRowInTableRequest\x1a\x1d.cdata.UpdateRowInTableResult\x12Q\n\x10GetRowsFromTable\x12\x1e.cdata.GetRowsFromTableRequest\x1a\x1d.cdata.GetRowsFromTableResult\x12l\n\x19GetRowFromPartialDatabase\x12\'.cdata.GetRowFromPartialDatabaseRequest\x1a&.cdata.GetRowFromPartialDatabaseResult\x12\x45\n\x0cSaveContract\x12\x1a.cdata.SaveContractRequest\x1a\x19.cdata.SaveContractResult\x12\x63\n\x0e\x41\x63\x63\x65ptContract\x12(.cdata.ParticipantAcceptsContractRequest\x1a\'.cdata.ParticipantAcceptsContractResult\x12u\n\x1cRemoveRowFromPartialDatabase\x12*.cdata.RemoveRowFromPartialDatabaseRequest\x1a).cdata.RemoveRowFromPartialDatabaseResult\x12k\n\x18UpdateRowDataHashForHost\x12&.cdata.UpdateRowDataHashForHostRequest\x1a\'.cdata.UpdateRowDataHashForHostResponse\x12\x65\n\x16NotifyHostOfRemovedRow\x12$.cdata.NotifyHostOfRemovedRowRequest\x1a%.cdata.NotifyHostOfRemovedRowResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0b\x63\x64\x61ta.proto\x12\x05\x63\x64\x61ta\"\x8a\x01\n\x1bTryAuthAtParticipantRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x15\n\rparticipantId\x18\x02 \x01(\t\x12\x18\n\x10participantAlias\x18\x03 \x01(\t\x12\x0e\n\x06\x64\x62Name\x18\x04 \x01(\t\"q\n\x17TryAuthAtPartipantReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"x\n\x17\x43hangeHostStatusRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x11\n\thostAlias\x18\x02 \x01(\t\x12\x0e\n\x06hostId\x18\x03 \x01(\t\x12\x0e\n\x06status\x18\x04 \x01(\r\"n\n\x15\x43hangeHostStatusReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0e\n\x06status\x18\x03 \x01(\r\"W\n\x17GenerateHostInfoRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x10\n\x08hostName\x18\x02 \x01(\t\"^\n\x15GenerateHostInfoReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\"|\n\x1eSendParticipantContractRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x18\n\x10participantAlias\x18\x03 \x01(\t\"p\n\x1cSendParticipantContractReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x0e\n\x06isSent\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"\x93\x01\n\x12StatementResultset\x12\x0f\n\x07isError\x18\x01 \x01(\x08\x12\x15\n\rresultMessage\x18\x02 \x01(\t\x12\x1c\n\x14numberOfRowsAffected\x18\x03 \x01(\x04\x12\x18\n\x04rows\x18\x04 \x03(\x0b\x32\n.cdata.Row\x12\x1d\n\x15\x65xecutionErrorMessage\x18\x05 \x01(\t\"]\n\x19\x43reateUserDatabaseRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\"n\n\x17\x43reateUserDatabaseReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x11\n\tisCreated\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"\x82\x01\n\x12\x45xecuteReadRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x14\n\x0csqlStatement\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x61tabaseType\x18\x04 \x01(\r\"\x88\x01\n\x10\x45xecuteReadReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x17\n\x0ftotalResultsets\x18\x02 \x01(\x04\x12*\n\x07results\x18\x03 \x03(\x0b\x32\x19.cdata.StatementResultset\"\x83\x01\n\x13\x45xecuteWriteRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x14\n\x0csqlStatement\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x61tabaseType\x18\x04 \x01(\r\"u\n\x11\x45xecuteWriteReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x19\n\x11totalRowsAffected\x18\x03 \x01(\r\"f\n\x0fHasTableRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x11\n\ttableName\x18\x03 \x01(\t\"R\n\rHasTableReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x10\n\x08hasTable\x18\x02 \x01(\x08\"\xa0\x01\n\x17GenerateContractRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x10\n\x08hostName\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x61tabaseName\x18\x04 \x01(\t\x12\x1c\n\x14remoteDeleteBehavior\x18\x05 \x01(\r\"o\n\x15GenerateContractReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"\x89\x01\n\x1eSetLogicalStoragePolicyRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x11\n\ttableName\x18\x03 \x01(\t\x12\x12\n\npolicyMode\x18\x04 \x01(\r\"v\n\x1cSetLogicalStoragePolicyReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"u\n\x1eGetLogicalStoragePolicyRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x11\n\ttableName\x18\x03 \x01(\t\"c\n\x1cGetLogicalStoragePolicyReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x12\n\npolicyMode\x18\x02 \x01(\r\"\xc9\x01\n\x1e\x45xecuteCooperativeWriteRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x14\n\x0csqlStatement\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x61tabaseType\x18\x04 \x01(\r\x12\r\n\x05\x61lias\x18\x05 \x01(\t\x12\x15\n\rparticipantId\x18\x06 \x01(\t\x12\x13\n\x0bwhereClause\x18\x07 \x01(\t\"\x80\x01\n\x1c\x45xecuteCooperativeWriteReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x19\n\x11totalRowsAffected\x18\x03 \x01(\r\"\x8a\x01\n\x15\x41\x64\x64ParticipantRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\r\n\x05\x61lias\x18\x03 \x01(\t\x12\x12\n\nip4Address\x18\x04 \x01(\t\x12\x0c\n\x04port\x18\x05 \x01(\r\"m\n\x13\x41\x64\x64ParticipantReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"I\n\x1bViewPendingContractsRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\"p\n\x19ViewPendingContractsReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\"\n\tcontracts\x18\x02 \x03(\x0b\x32\x0f.cdata.Contract\"]\n\x1c\x41\x63\x63\x65ptPendingContractRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x11\n\thostAlias\x18\x02 \x01(\t\"t\n\x1a\x41\x63\x63\x65ptPendingContractReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"]\n\x1cRejectPendingContractRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x11\n\thostAlias\x18\x02 \x01(\t\"t\n\x1aRejectPendingContractReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"e\n!EnableCoooperativeFeaturesRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\"y\n\x1f\x45nableCoooperativeFeaturesReply\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\"<\n\x0eTryAuthRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\"@\n\rTryAuthResult\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\"\xa5\x01\n\x12\x43reateTableRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61tabaseGUID\x18\x03 \x01(\t\x12\x11\n\ttableName\x18\x04 \x01(\t\x12$\n\x07\x63olumns\x18\x05 \x03(\x0b\x32\x13.cdata.ColumnSchema\"\xbf\x01\n\x11\x43reateTableResult\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x14\n\x0c\x64\x61tabaseName\x18\x03 \x01(\t\x12\x15\n\rresultMessage\x18\x04 \x01(\t\x12\x12\n\ndatabaseId\x18\x05 \x01(\t\x12\x11\n\ttableName\x18\x06 \x01(\t\x12\x0f\n\x07tableId\x18\x07 \x01(\t\"S\n\x07RowInfo\x12\x14\n\x0c\x64\x61tabaseName\x18\x01 \x01(\t\x12\x11\n\ttableName\x18\x02 \x01(\t\x12\r\n\x05rowid\x18\x03 \x01(\r\x12\x10\n\x08\x64\x61taHash\x18\x04 \x01(\x04\"u\n\x11InsertDataRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x11\n\ttableName\x18\x03 \x01(\t\x12\x0b\n\x03\x63md\x18\x04 \x01(\t\"\x8b\x01\n\x10InsertDataResult\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x10\n\x08\x64\x61taHash\x18\x03 \x01(\x04\x12\x0f\n\x07message\x18\x04 \x01(\t\x12\r\n\x05rowId\x18\x05 \x01(\r\"\x8a\x01\n\x11UpdateDataRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x11\n\ttableName\x18\x03 \x01(\t\x12\x0b\n\x03\x63md\x18\x04 \x01(\t\x12\x13\n\x0bwhereClause\x18\x05 \x01(\t\"\x88\x01\n\x10UpdateDataResult\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\x12\x1c\n\x04rows\x18\x04 \x03(\x0b\x32\x0e.cdata.RowInfo\"\x8a\x01\n\x11\x44\x65leteDataRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x14\n\x0c\x64\x61tabaseName\x18\x02 \x01(\t\x12\x11\n\ttableName\x18\x03 \x01(\t\x12\x0b\n\x03\x63md\x18\x04 \x01(\t\x12\x13\n\x0bwhereClause\x18\x05 \x01(\t\"\x88\x01\n\x10\x44\x65leteDataResult\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x0f\n\x07message\x18\x03 \x01(\t\x12\x1c\n\x04rows\x18\x04 \x03(\x0b\x32\x0e.cdata.RowInfo\"\xa9\x01\n GetRowFromPartialDatabaseRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\x30\n\nrowAddress\x18\x02 \x01(\x0b\x32\x1c.cdata.RowParticipantAddress\x12\'\n\x0bMessageInfo\x18\x03 \x01(\x0b\x32\x12.cdata.MessageInfo\"\x98\x01\n\x1fGetRowFromPartialDatabaseResult\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x15\n\rresultMessage\x18\x03 \x01(\t\x12\x17\n\x03row\x18\x04 \x01(\x0b\x32\n.cdata.Row\"a\n\x13SaveContractRequest\x12!\n\x08\x63ontract\x18\x01 \x01(\x0b\x32\x0f.cdata.Contract\x12\'\n\x0bmessageInfo\x18\x02 \x01(\x0b\x32\x12.cdata.MessageInfo\";\n\x12SaveContractResult\x12\x0f\n\x07isSaved\x18\x01 \x01(\x08\x12\x14\n\x0c\x65rrorMessage\x18\x02 \x01(\t\"\xbe\x01\n!ParticipantAcceptsContractRequest\x12\'\n\x0bparticipant\x18\x01 \x01(\x0b\x32\x12.cdata.Participant\x12\x14\n\x0c\x63ontractGUID\x18\x02 \x01(\t\x12\x1b\n\x13\x63ontractVersionGUID\x18\x03 \x01(\t\x12\x14\n\x0c\x64\x61tabaseName\x18\x04 \x01(\t\x12\'\n\x0bmessageInfo\x18\x05 \x01(\x0b\x32\x12.cdata.MessageInfo\"b\n ParticipantAcceptsContractResult\x12(\n contractAcceptanceIsAcknowledged\x18\x01 \x01(\x08\x12\x14\n\x0c\x65rrorMessage\x18\x02 \x01(\t\"\x8c\x02\n\x1fUpdateRowDataHashForHostRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\'\n\x0bMessageInfo\x18\x02 \x01(\x0b\x32\x12.cdata.MessageInfo\x12\x1d\n\x08hostInfo\x18\x03 \x01(\x0b\x32\x0b.cdata.Host\x12\x14\n\x0c\x64\x61tabaseName\x18\x04 \x01(\t\x12\x12\n\ndatabaseId\x18\x05 \x01(\t\x12\x11\n\ttableName\x18\x06 \x01(\t\x12\x0f\n\x07tableId\x18\x07 \x01(\r\x12\r\n\x05rowId\x18\x08 \x01(\r\x12\x18\n\x10updatedHashValue\x18\t \x01(\x0c\"i\n UpdateRowDataHashForHostResponse\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\"\xf0\x01\n\x1dNotifyHostOfRemovedRowRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\'\n\x0bMessageInfo\x18\x02 \x01(\x0b\x32\x12.cdata.MessageInfo\x12\x1d\n\x08hostInfo\x18\x03 \x01(\x0b\x32\x0b.cdata.Host\x12\x14\n\x0c\x64\x61tabaseName\x18\x04 \x01(\t\x12\x12\n\ndatabaseId\x18\x05 \x01(\t\x12\x11\n\ttableName\x18\x06 \x01(\t\x12\x0f\n\x07tableId\x18\x07 \x01(\r\x12\r\n\x05rowId\x18\x08 \x01(\r\"g\n\x1eNotifyHostOfRemovedRowResponse\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\"\xaa\x01\n\x0bTestRequest\x12\x16\n\x0erequestTimeUTC\x18\x01 \x01(\t\x12\x18\n\x10requestOriginURL\x18\x02 \x01(\t\x12\x18\n\x10requestOriginIP4\x18\x03 \x01(\t\x12\x18\n\x10requestOriginIP6\x18\x04 \x01(\t\x12\x19\n\x11requestPortNumber\x18\x05 \x01(\r\x12\x1a\n\x12requestEchoMessage\x18\x06 \x01(\t\";\n\tTestReply\x12\x14\n\x0creplyTimeUTC\x18\x01 \x01(\t\x12\x18\n\x10replyEchoMessage\x18\x02 \x01(\t\"u\n\x0bMessageInfo\x12\x16\n\x0eisLittleEndian\x18\x01 \x01(\x08\x12\x18\n\x10messageAddresses\x18\x02 \x03(\t\x12\x1f\n\x17messageGeneratedTimeUTC\x18\x03 \x01(\t\x12\x13\n\x0bmessageGUID\x18\x04 \x01(\t\"J\n\x0b\x41uthRequest\x12\x10\n\x08userName\x18\x01 \x01(\t\x12\n\n\x02pw\x18\x02 \x01(\t\x12\x0e\n\x06pwHash\x18\x03 \x01(\x0c\x12\r\n\x05token\x18\x04 \x01(\x0c\"e\n\nAuthResult\x12\x10\n\x08userName\x18\x01 \x01(\t\x12\r\n\x05token\x18\x02 \x01(\t\x12\x17\n\x0fisAuthenticated\x18\x03 \x01(\x08\x12\x1d\n\x15\x61uthenticationMessage\x18\x04 \x01(\t\"\x82\x01\n\x15\x43reateDatabaseRequest\x12*\n\x0e\x61uthentication\x18\x01 \x01(\x0b\x32\x12.cdata.AuthRequest\x12\'\n\x0bmessageInfo\x18\x02 \x01(\x0b\x32\x12.cdata.MessageInfo\x12\x14\n\x0c\x64\x61tabaseName\x18\x03 \x01(\t\"\x9e\x01\n\x14\x43reateDatabaseResult\x12/\n\x14\x61uthenticationResult\x18\x01 \x01(\x0b\x32\x11.cdata.AuthResult\x12\x14\n\x0cisSuccessful\x18\x02 \x01(\x08\x12\x14\n\x0c\x64\x61tabaseName\x18\x03 \x01(\t\x12\x15\n\rresultMessage\x18\x04 \x01(\t\x12\x12\n\ndatabaseId\x18\x05 \x01(\t\"\xb4\x01\n\x03Row\x12\x14\n\x0c\x64\x61tabaseName\x18\x01 \x01(\t\x12\x11\n\ttableName\x18\x02 \x01(\t\x12\r\n\x05rowId\x18\x03 \x01(\r\x12\x1f\n\x06values\x18\x04 \x03(\x0b\x32\x0f.cdata.RowValue\x12\x14\n\x0cisRemoteable\x18\x05 \x01(\x08\x12\x30\n\x0eremoteMetadata\x18\x06 \x01(\x0b\x32\x18.cdata.RowRemoteMetadata\x12\x0c\n\x04hash\x18\x07 \x01(\x0c\"h\n\x08RowValue\x12#\n\x06\x63olumn\x18\x01 \x01(\x0b\x32\x13.cdata.ColumnSchema\x12\x13\n\x0bisNullValue\x18\x02 \x01(\x08\x12\r\n\x05value\x18\x03 \x01(\x0c\x12\x13\n\x0bstringValue\x18\x04 \x01(\t\"\x88\x01\n\x11RowRemoteMetadata\x12!\n\x19isRemoteOutOfSyncWithHost\x18\x01 \x01(\x08\x12\x1f\n\x17isHashOutOfSyncWithHost\x18\x02 \x01(\x08\x12\x17\n\x0fisRemoteDeleted\x18\x03 \x01(\x08\x12\x16\n\x0eisLocalDeleted\x18\x04 \x01(\x08\"\xaa\x01\n\x0c\x43olumnSchema\x12\x12\n\ncolumnName\x18\x01 \x01(\t\x12\x12\n\ncolumnType\x18\x02 \x01(\r\x12\x14\n\x0c\x63olumnLength\x18\x03 \x01(\r\x12\x12\n\nisNullable\x18\x04 \x01(\x08\x12\x0f\n\x07ordinal\x18\x05 \x01(\r\x12\x0f\n\x07tableId\x18\x06 \x01(\t\x12\x10\n\x08\x63olumnId\x18\x07 \x01(\t\x12\x14\n\x0cisPrimaryKey\x18\x08 \x01(\x08\"\xa4\x01\n\x08\x43ontract\x12\x14\n\x0c\x63ontractGUID\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12%\n\x06schema\x18\x03 \x01(\x0b\x32\x15.cdata.DatabaseSchema\x12\x17\n\x0f\x63ontractVersion\x18\x04 \x01(\t\x12\x1d\n\x08hostInfo\x18\x05 \x01(\x0b\x32\x0b.cdata.Host\x12\x0e\n\x06status\x18\x06 \x01(\r\"\x88\x01\n\x0bParticipant\x12\x17\n\x0fparticipantGUID\x18\x01 \x01(\t\x12\r\n\x05\x61lias\x18\x02 \x01(\t\x12\x12\n\nip4Address\x18\x03 \x01(\t\x12\x12\n\nip6Address\x18\x04 \x01(\t\x12\x1a\n\x12\x64\x61tabasePortNumber\x18\x05 \x01(\r\x12\r\n\x05token\x18\x06 \x01(\x0c\"}\n\x04Host\x12\x10\n\x08hostGUID\x18\x01 \x01(\t\x12\x10\n\x08hostName\x18\x02 \x01(\t\x12\x12\n\nip4Address\x18\x03 \x01(\t\x12\x12\n\nip6Address\x18\x04 \x01(\t\x12\x1a\n\x12\x64\x61tabasePortNumber\x18\x05 \x01(\r\x12\r\n\x05token\x18\x06 \x01(\x0c\"^\n\x0e\x44\x61tabaseSchema\x12\x14\n\x0c\x64\x61tabaseName\x18\x01 \x01(\t\x12\x12\n\ndatabaseId\x18\x02 \x01(\t\x12\"\n\x06tables\x18\x03 \x03(\x0b\x32\x12.cdata.TableSchema\"\x9f\x01\n\x0bTableSchema\x12\x11\n\ttableName\x18\x01 \x01(\t\x12\x0f\n\x07tableId\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61tabaseName\x18\x03 \x01(\t\x12\x12\n\ndatabaseId\x18\x04 \x01(\t\x12$\n\x07\x63olumns\x18\x05 \x03(\x0b\x32\x13.cdata.ColumnSchema\x12\x1c\n\x14logicalStoragePolicy\x18\x06 \x01(\r\"F\n\x0fTransactionInfo\x12\x1a\n\x12TransactionBatchId\x18\x01 \x01(\t\x12\x17\n\x0fTransactionMode\x18\x02 \x01(\r\"O\n\x15RowParticipantAddress\x12\x14\n\x0c\x64\x61tabaseName\x18\x01 \x01(\t\x12\x11\n\ttableName\x18\x02 \x01(\t\x12\r\n\x05rowId\x18\x03 \x01(\r2\xa4\x0c\n\tSQLClient\x12\x30\n\x08IsOnline\x12\x12.cdata.TestRequest\x1a\x10.cdata.TestReply\x12V\n\x12\x43reateUserDatabase\x12 .cdata.CreateUserDatabaseRequest\x1a\x1e.cdata.CreateUserDatabaseReply\x12n\n\x1a\x45nableCoooperativeFeatures\x12(.cdata.EnableCoooperativeFeaturesRequest\x1a&.cdata.EnableCoooperativeFeaturesReply\x12\x41\n\x0b\x45xecuteRead\x12\x19.cdata.ExecuteReadRequest\x1a\x17.cdata.ExecuteReadReply\x12\x44\n\x0c\x45xecuteWrite\x12\x1a.cdata.ExecuteWriteRequest\x1a\x18.cdata.ExecuteWriteReply\x12\x65\n\x17\x45xecuteCooperativeWrite\x12%.cdata.ExecuteCooperativeWriteRequest\x1a#.cdata.ExecuteCooperativeWriteReply\x12\x38\n\x08HasTable\x12\x16.cdata.HasTableRequest\x1a\x14.cdata.HasTableReply\x12\x65\n\x17SetLogicalStoragePolicy\x12%.cdata.SetLogicalStoragePolicyRequest\x1a#.cdata.SetLogicalStoragePolicyReply\x12\x65\n\x17GetLogicalStoragePolicy\x12%.cdata.GetLogicalStoragePolicyRequest\x1a#.cdata.GetLogicalStoragePolicyReply\x12P\n\x10GenerateContract\x12\x1e.cdata.GenerateContractRequest\x1a\x1c.cdata.GenerateContractReply\x12J\n\x0e\x41\x64\x64Participant\x12\x1c.cdata.AddParticipantRequest\x1a\x1a.cdata.AddParticipantReply\x12\x65\n\x17SendParticipantContract\x12%.cdata.SendParticipantContractRequest\x1a#.cdata.SendParticipantContractReply\x12^\n\x16ReviewPendingContracts\x12\".cdata.ViewPendingContractsRequest\x1a .cdata.ViewPendingContractsReply\x12_\n\x15\x41\x63\x63\x65ptPendingContract\x12#.cdata.AcceptPendingContractRequest\x1a!.cdata.AcceptPendingContractReply\x12_\n\x15RejectPendingContract\x12#.cdata.RejectPendingContractRequest\x1a!.cdata.RejectPendingContractReply\x12P\n\x10GenerateHostInfo\x12\x1e.cdata.GenerateHostInfoRequest\x1a\x1c.cdata.GenerateHostInfoReply\x12P\n\x10\x43hangeHostStatus\x12\x1e.cdata.ChangeHostStatusRequest\x1a\x1c.cdata.ChangeHostStatusReply\x12Z\n\x14TryAuthAtParticipant\x12\".cdata.TryAuthAtParticipantRequest\x1a\x1e.cdata.TryAuthAtPartipantReply2\xee\x07\n\x0b\x44\x61taService\x12\x30\n\x08IsOnline\x12\x12.cdata.TestRequest\x1a\x10.cdata.TestReply\x12R\n\x15\x43reatePartialDatabase\x12\x1c.cdata.CreateDatabaseRequest\x1a\x1b.cdata.CreateDatabaseResult\x12L\n\x15\x43reateTableInDatabase\x12\x19.cdata.CreateTableRequest\x1a\x18.cdata.CreateTableResult\x12K\n\x16InsertCommandIntoTable\x12\x18.cdata.InsertDataRequest\x1a\x17.cdata.InsertDataResult\x12K\n\x16UpdateCommandIntoTable\x12\x18.cdata.UpdateDataRequest\x1a\x17.cdata.UpdateDataResult\x12K\n\x16\x44\x65leteCommandIntoTable\x12\x18.cdata.DeleteDataRequest\x1a\x17.cdata.DeleteDataResult\x12l\n\x19GetRowFromPartialDatabase\x12\'.cdata.GetRowFromPartialDatabaseRequest\x1a&.cdata.GetRowFromPartialDatabaseResult\x12\x45\n\x0cSaveContract\x12\x1a.cdata.SaveContractRequest\x1a\x19.cdata.SaveContractResult\x12\x63\n\x0e\x41\x63\x63\x65ptContract\x12(.cdata.ParticipantAcceptsContractRequest\x1a\'.cdata.ParticipantAcceptsContractResult\x12k\n\x18UpdateRowDataHashForHost\x12&.cdata.UpdateRowDataHashForHostRequest\x1a\'.cdata.UpdateRowDataHashForHostResponse\x12\x65\n\x16NotifyHostOfRemovedRow\x12$.cdata.NotifyHostOfRemovedRowRequest\x1a%.cdata.NotifyHostOfRemovedRowResponse\x12\x36\n\x07TryAuth\x12\x15.cdata.TryAuthRequest\x1a\x14.cdata.TryAuthResultb\x06proto3')
 
 
 
+_TRYAUTHATPARTICIPANTREQUEST = DESCRIPTOR.message_types_by_name['TryAuthAtParticipantRequest']
+_TRYAUTHATPARTIPANTREPLY = DESCRIPTOR.message_types_by_name['TryAuthAtPartipantReply']
+_CHANGEHOSTSTATUSREQUEST = DESCRIPTOR.message_types_by_name['ChangeHostStatusRequest']
+_CHANGEHOSTSTATUSREPLY = DESCRIPTOR.message_types_by_name['ChangeHostStatusReply']
+_GENERATEHOSTINFOREQUEST = DESCRIPTOR.message_types_by_name['GenerateHostInfoRequest']
+_GENERATEHOSTINFOREPLY = DESCRIPTOR.message_types_by_name['GenerateHostInfoReply']
 _SENDPARTICIPANTCONTRACTREQUEST = DESCRIPTOR.message_types_by_name['SendParticipantContractRequest']
 _SENDPARTICIPANTCONTRACTREPLY = DESCRIPTOR.message_types_by_name['SendParticipantContractReply']
 _STATEMENTRESULTSET = DESCRIPTOR.message_types_by_name['StatementResultset']
@@ -35,8 +41,6 @@ _SETLOGICALSTORAGEPOLICYREQUEST = DESCRIPTOR.message_types_by_name['SetLogicalSt
 _SETLOGICALSTORAGEPOLICYREPLY = DESCRIPTOR.message_types_by_name['SetLogicalStoragePolicyReply']
 _GETLOGICALSTORAGEPOLICYREQUEST = DESCRIPTOR.message_types_by_name['GetLogicalStoragePolicyRequest']
 _GETLOGICALSTORAGEPOLICYREPLY = DESCRIPTOR.message_types_by_name['GetLogicalStoragePolicyReply']
-_EXECUTECOOPERATIVEREADREQUEST = DESCRIPTOR.message_types_by_name['ExecuteCooperativeReadRequest']
-_EXECUTECOOPERATIVEREADREPLY = DESCRIPTOR.message_types_by_name['ExecuteCooperativeReadReply']
 _EXECUTECOOPERATIVEWRITEREQUEST = DESCRIPTOR.message_types_by_name['ExecuteCooperativeWriteRequest']
 _EXECUTECOOPERATIVEWRITEREPLY = DESCRIPTOR.message_types_by_name['ExecuteCooperativeWriteReply']
 _ADDPARTICIPANTREQUEST = DESCRIPTOR.message_types_by_name['AddParticipantRequest']
@@ -49,22 +53,23 @@ _REJECTPENDINGCONTRACTREQUEST = DESCRIPTOR.message_types_by_name['RejectPendingC
 _REJECTPENDINGCONTRACTREPLY = DESCRIPTOR.message_types_by_name['RejectPendingContractReply']
 _ENABLECOOOPERATIVEFEATURESREQUEST = DESCRIPTOR.message_types_by_name['EnableCoooperativeFeaturesRequest']
 _ENABLECOOOPERATIVEFEATURESREPLY = DESCRIPTOR.message_types_by_name['EnableCoooperativeFeaturesReply']
+_TRYAUTHREQUEST = DESCRIPTOR.message_types_by_name['TryAuthRequest']
+_TRYAUTHRESULT = DESCRIPTOR.message_types_by_name['TryAuthResult']
 _CREATETABLEREQUEST = DESCRIPTOR.message_types_by_name['CreateTableRequest']
 _CREATETABLERESULT = DESCRIPTOR.message_types_by_name['CreateTableResult']
-_INSERTROWREQUEST = DESCRIPTOR.message_types_by_name['InsertRowRequest']
-_INSERTROWRESULT = DESCRIPTOR.message_types_by_name['InsertRowResult']
-_UPDATEROWINTABLEREQUEST = DESCRIPTOR.message_types_by_name['UpdateRowInTableRequest']
-_UPDATEROWINTABLERESULT = DESCRIPTOR.message_types_by_name['UpdateRowInTableResult']
-_GETROWSFROMTABLEREQUEST = DESCRIPTOR.message_types_by_name['GetRowsFromTableRequest']
-_GETROWSFROMTABLERESULT = DESCRIPTOR.message_types_by_name['GetRowsFromTableResult']
+_ROWINFO = DESCRIPTOR.message_types_by_name['RowInfo']
+_INSERTDATAREQUEST = DESCRIPTOR.message_types_by_name['InsertDataRequest']
+_INSERTDATARESULT = DESCRIPTOR.message_types_by_name['InsertDataResult']
+_UPDATEDATAREQUEST = DESCRIPTOR.message_types_by_name['UpdateDataRequest']
+_UPDATEDATARESULT = DESCRIPTOR.message_types_by_name['UpdateDataResult']
+_DELETEDATAREQUEST = DESCRIPTOR.message_types_by_name['DeleteDataRequest']
+_DELETEDATARESULT = DESCRIPTOR.message_types_by_name['DeleteDataResult']
 _GETROWFROMPARTIALDATABASEREQUEST = DESCRIPTOR.message_types_by_name['GetRowFromPartialDatabaseRequest']
 _GETROWFROMPARTIALDATABASERESULT = DESCRIPTOR.message_types_by_name['GetRowFromPartialDatabaseResult']
 _SAVECONTRACTREQUEST = DESCRIPTOR.message_types_by_name['SaveContractRequest']
 _SAVECONTRACTRESULT = DESCRIPTOR.message_types_by_name['SaveContractResult']
 _PARTICIPANTACCEPTSCONTRACTREQUEST = DESCRIPTOR.message_types_by_name['ParticipantAcceptsContractRequest']
 _PARTICIPANTACCEPTSCONTRACTRESULT = DESCRIPTOR.message_types_by_name['ParticipantAcceptsContractResult']
-_REMOVEROWFROMPARTIALDATABASEREQUEST = DESCRIPTOR.message_types_by_name['RemoveRowFromPartialDatabaseRequest']
-_REMOVEROWFROMPARTIALDATABASERESULT = DESCRIPTOR.message_types_by_name['RemoveRowFromPartialDatabaseResult']
 _UPDATEROWDATAHASHFORHOSTREQUEST = DESCRIPTOR.message_types_by_name['UpdateRowDataHashForHostRequest']
 _UPDATEROWDATAHASHFORHOSTRESPONSE = DESCRIPTOR.message_types_by_name['UpdateRowDataHashForHostResponse']
 _NOTIFYHOSTOFREMOVEDROWREQUEST = DESCRIPTOR.message_types_by_name['NotifyHostOfRemovedRowRequest']
@@ -87,6 +92,48 @@ _DATABASESCHEMA = DESCRIPTOR.message_types_by_name['DatabaseSchema']
 _TABLESCHEMA = DESCRIPTOR.message_types_by_name['TableSchema']
 _TRANSACTIONINFO = DESCRIPTOR.message_types_by_name['TransactionInfo']
 _ROWPARTICIPANTADDRESS = DESCRIPTOR.message_types_by_name['RowParticipantAddress']
+TryAuthAtParticipantRequest = _reflection.GeneratedProtocolMessageType('TryAuthAtParticipantRequest', (_message.Message,), {
+  'DESCRIPTOR' : _TRYAUTHATPARTICIPANTREQUEST,
+  '__module__' : 'cdata_pb2'
+  # @@protoc_insertion_point(class_scope:cdata.TryAuthAtParticipantRequest)
+  })
+_sym_db.RegisterMessage(TryAuthAtParticipantRequest)
+
+TryAuthAtPartipantReply = _reflection.GeneratedProtocolMessageType('TryAuthAtPartipantReply', (_message.Message,), {
+  'DESCRIPTOR' : _TRYAUTHATPARTIPANTREPLY,
+  '__module__' : 'cdata_pb2'
+  # @@protoc_insertion_point(class_scope:cdata.TryAuthAtPartipantReply)
+  })
+_sym_db.RegisterMessage(TryAuthAtPartipantReply)
+
+ChangeHostStatusRequest = _reflection.GeneratedProtocolMessageType('ChangeHostStatusRequest', (_message.Message,), {
+  'DESCRIPTOR' : _CHANGEHOSTSTATUSREQUEST,
+  '__module__' : 'cdata_pb2'
+  # @@protoc_insertion_point(class_scope:cdata.ChangeHostStatusRequest)
+  })
+_sym_db.RegisterMessage(ChangeHostStatusRequest)
+
+ChangeHostStatusReply = _reflection.GeneratedProtocolMessageType('ChangeHostStatusReply', (_message.Message,), {
+  'DESCRIPTOR' : _CHANGEHOSTSTATUSREPLY,
+  '__module__' : 'cdata_pb2'
+  # @@protoc_insertion_point(class_scope:cdata.ChangeHostStatusReply)
+  })
+_sym_db.RegisterMessage(ChangeHostStatusReply)
+
+GenerateHostInfoRequest = _reflection.GeneratedProtocolMessageType('GenerateHostInfoRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GENERATEHOSTINFOREQUEST,
+  '__module__' : 'cdata_pb2'
+  # @@protoc_insertion_point(class_scope:cdata.GenerateHostInfoRequest)
+  })
+_sym_db.RegisterMessage(GenerateHostInfoRequest)
+
+GenerateHostInfoReply = _reflection.GeneratedProtocolMessageType('GenerateHostInfoReply', (_message.Message,), {
+  'DESCRIPTOR' : _GENERATEHOSTINFOREPLY,
+  '__module__' : 'cdata_pb2'
+  # @@protoc_insertion_point(class_scope:cdata.GenerateHostInfoReply)
+  })
+_sym_db.RegisterMessage(GenerateHostInfoReply)
+
 SendParticipantContractRequest = _reflection.GeneratedProtocolMessageType('SendParticipantContractRequest', (_message.Message,), {
   'DESCRIPTOR' : _SENDPARTICIPANTCONTRACTREQUEST,
   '__module__' : 'cdata_pb2'
@@ -206,20 +253,6 @@ GetLogicalStoragePolicyReply = _reflection.GeneratedProtocolMessageType('GetLogi
   })
 _sym_db.RegisterMessage(GetLogicalStoragePolicyReply)
 
-ExecuteCooperativeReadRequest = _reflection.GeneratedProtocolMessageType('ExecuteCooperativeReadRequest', (_message.Message,), {
-  'DESCRIPTOR' : _EXECUTECOOPERATIVEREADREQUEST,
-  '__module__' : 'cdata_pb2'
-  # @@protoc_insertion_point(class_scope:cdata.ExecuteCooperativeReadRequest)
-  })
-_sym_db.RegisterMessage(ExecuteCooperativeReadRequest)
-
-ExecuteCooperativeReadReply = _reflection.GeneratedProtocolMessageType('ExecuteCooperativeReadReply', (_message.Message,), {
-  'DESCRIPTOR' : _EXECUTECOOPERATIVEREADREPLY,
-  '__module__' : 'cdata_pb2'
-  # @@protoc_insertion_point(class_scope:cdata.ExecuteCooperativeReadReply)
-  })
-_sym_db.RegisterMessage(ExecuteCooperativeReadReply)
-
 ExecuteCooperativeWriteRequest = _reflection.GeneratedProtocolMessageType('ExecuteCooperativeWriteRequest', (_message.Message,), {
   'DESCRIPTOR' : _EXECUTECOOPERATIVEWRITEREQUEST,
   '__module__' : 'cdata_pb2'
@@ -304,6 +337,20 @@ EnableCoooperativeFeaturesReply = _reflection.GeneratedProtocolMessageType('Enab
   })
 _sym_db.RegisterMessage(EnableCoooperativeFeaturesReply)
 
+TryAuthRequest = _reflection.GeneratedProtocolMessageType('TryAuthRequest', (_message.Message,), {
+  'DESCRIPTOR' : _TRYAUTHREQUEST,
+  '__module__' : 'cdata_pb2'
+  # @@protoc_insertion_point(class_scope:cdata.TryAuthRequest)
+  })
+_sym_db.RegisterMessage(TryAuthRequest)
+
+TryAuthResult = _reflection.GeneratedProtocolMessageType('TryAuthResult', (_message.Message,), {
+  'DESCRIPTOR' : _TRYAUTHRESULT,
+  '__module__' : 'cdata_pb2'
+  # @@protoc_insertion_point(class_scope:cdata.TryAuthResult)
+  })
+_sym_db.RegisterMessage(TryAuthResult)
+
 CreateTableRequest = _reflection.GeneratedProtocolMessageType('CreateTableRequest', (_message.Message,), {
   'DESCRIPTOR' : _CREATETABLEREQUEST,
   '__module__' : 'cdata_pb2'
@@ -318,47 +365,54 @@ CreateTableResult = _reflection.GeneratedProtocolMessageType('CreateTableResult'
   })
 _sym_db.RegisterMessage(CreateTableResult)
 
-InsertRowRequest = _reflection.GeneratedProtocolMessageType('InsertRowRequest', (_message.Message,), {
-  'DESCRIPTOR' : _INSERTROWREQUEST,
+RowInfo = _reflection.GeneratedProtocolMessageType('RowInfo', (_message.Message,), {
+  'DESCRIPTOR' : _ROWINFO,
   '__module__' : 'cdata_pb2'
-  # @@protoc_insertion_point(class_scope:cdata.InsertRowRequest)
+  # @@protoc_insertion_point(class_scope:cdata.RowInfo)
   })
-_sym_db.RegisterMessage(InsertRowRequest)
+_sym_db.RegisterMessage(RowInfo)
 
-InsertRowResult = _reflection.GeneratedProtocolMessageType('InsertRowResult', (_message.Message,), {
-  'DESCRIPTOR' : _INSERTROWRESULT,
+InsertDataRequest = _reflection.GeneratedProtocolMessageType('InsertDataRequest', (_message.Message,), {
+  'DESCRIPTOR' : _INSERTDATAREQUEST,
   '__module__' : 'cdata_pb2'
-  # @@protoc_insertion_point(class_scope:cdata.InsertRowResult)
+  # @@protoc_insertion_point(class_scope:cdata.InsertDataRequest)
   })
-_sym_db.RegisterMessage(InsertRowResult)
+_sym_db.RegisterMessage(InsertDataRequest)
 
-UpdateRowInTableRequest = _reflection.GeneratedProtocolMessageType('UpdateRowInTableRequest', (_message.Message,), {
-  'DESCRIPTOR' : _UPDATEROWINTABLEREQUEST,
+InsertDataResult = _reflection.GeneratedProtocolMessageType('InsertDataResult', (_message.Message,), {
+  'DESCRIPTOR' : _INSERTDATARESULT,
   '__module__' : 'cdata_pb2'
-  # @@protoc_insertion_point(class_scope:cdata.UpdateRowInTableRequest)
+  # @@protoc_insertion_point(class_scope:cdata.InsertDataResult)
   })
-_sym_db.RegisterMessage(UpdateRowInTableRequest)
+_sym_db.RegisterMessage(InsertDataResult)
 
-UpdateRowInTableResult = _reflection.GeneratedProtocolMessageType('UpdateRowInTableResult', (_message.Message,), {
-  'DESCRIPTOR' : _UPDATEROWINTABLERESULT,
+UpdateDataRequest = _reflection.GeneratedProtocolMessageType('UpdateDataRequest', (_message.Message,), {
+  'DESCRIPTOR' : _UPDATEDATAREQUEST,
   '__module__' : 'cdata_pb2'
-  # @@protoc_insertion_point(class_scope:cdata.UpdateRowInTableResult)
+  # @@protoc_insertion_point(class_scope:cdata.UpdateDataRequest)
   })
-_sym_db.RegisterMessage(UpdateRowInTableResult)
+_sym_db.RegisterMessage(UpdateDataRequest)
 
-GetRowsFromTableRequest = _reflection.GeneratedProtocolMessageType('GetRowsFromTableRequest', (_message.Message,), {
-  'DESCRIPTOR' : _GETROWSFROMTABLEREQUEST,
+UpdateDataResult = _reflection.GeneratedProtocolMessageType('UpdateDataResult', (_message.Message,), {
+  'DESCRIPTOR' : _UPDATEDATARESULT,
   '__module__' : 'cdata_pb2'
-  # @@protoc_insertion_point(class_scope:cdata.GetRowsFromTableRequest)
+  # @@protoc_insertion_point(class_scope:cdata.UpdateDataResult)
   })
-_sym_db.RegisterMessage(GetRowsFromTableRequest)
+_sym_db.RegisterMessage(UpdateDataResult)
 
-GetRowsFromTableResult = _reflection.GeneratedProtocolMessageType('GetRowsFromTableResult', (_message.Message,), {
-  'DESCRIPTOR' : _GETROWSFROMTABLERESULT,
+DeleteDataRequest = _reflection.GeneratedProtocolMessageType('DeleteDataRequest', (_message.Message,), {
+  'DESCRIPTOR' : _DELETEDATAREQUEST,
   '__module__' : 'cdata_pb2'
-  # @@protoc_insertion_point(class_scope:cdata.GetRowsFromTableResult)
+  # @@protoc_insertion_point(class_scope:cdata.DeleteDataRequest)
   })
-_sym_db.RegisterMessage(GetRowsFromTableResult)
+_sym_db.RegisterMessage(DeleteDataRequest)
+
+DeleteDataResult = _reflection.GeneratedProtocolMessageType('DeleteDataResult', (_message.Message,), {
+  'DESCRIPTOR' : _DELETEDATARESULT,
+  '__module__' : 'cdata_pb2'
+  # @@protoc_insertion_point(class_scope:cdata.DeleteDataResult)
+  })
+_sym_db.RegisterMessage(DeleteDataResult)
 
 GetRowFromPartialDatabaseRequest = _reflection.GeneratedProtocolMessageType('GetRowFromPartialDatabaseRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETROWFROMPARTIALDATABASEREQUEST,
@@ -401,20 +455,6 @@ ParticipantAcceptsContractResult = _reflection.GeneratedProtocolMessageType('Par
   # @@protoc_insertion_point(class_scope:cdata.ParticipantAcceptsContractResult)
   })
 _sym_db.RegisterMessage(ParticipantAcceptsContractResult)
-
-RemoveRowFromPartialDatabaseRequest = _reflection.GeneratedProtocolMessageType('RemoveRowFromPartialDatabaseRequest', (_message.Message,), {
-  'DESCRIPTOR' : _REMOVEROWFROMPARTIALDATABASEREQUEST,
-  '__module__' : 'cdata_pb2'
-  # @@protoc_insertion_point(class_scope:cdata.RemoveRowFromPartialDatabaseRequest)
-  })
-_sym_db.RegisterMessage(RemoveRowFromPartialDatabaseRequest)
-
-RemoveRowFromPartialDatabaseResult = _reflection.GeneratedProtocolMessageType('RemoveRowFromPartialDatabaseResult', (_message.Message,), {
-  'DESCRIPTOR' : _REMOVEROWFROMPARTIALDATABASERESULT,
-  '__module__' : 'cdata_pb2'
-  # @@protoc_insertion_point(class_scope:cdata.RemoveRowFromPartialDatabaseResult)
-  })
-_sym_db.RegisterMessage(RemoveRowFromPartialDatabaseResult)
 
 UpdateRowDataHashForHostRequest = _reflection.GeneratedProtocolMessageType('UpdateRowDataHashForHostRequest', (_message.Message,), {
   'DESCRIPTOR' : _UPDATEROWDATAHASHFORHOSTREQUEST,
@@ -575,146 +615,156 @@ _DATASERVICE = DESCRIPTOR.services_by_name['DataService']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _SENDPARTICIPANTCONTRACTREQUEST._serialized_start=22
-  _SENDPARTICIPANTCONTRACTREQUEST._serialized_end=146
-  _SENDPARTICIPANTCONTRACTREPLY._serialized_start=148
-  _SENDPARTICIPANTCONTRACTREPLY._serialized_end=260
-  _STATEMENTRESULTSET._serialized_start=263
-  _STATEMENTRESULTSET._serialized_end=410
-  _CREATEUSERDATABASEREQUEST._serialized_start=412
-  _CREATEUSERDATABASEREQUEST._serialized_end=505
-  _CREATEUSERDATABASEREPLY._serialized_start=507
-  _CREATEUSERDATABASEREPLY._serialized_end=617
-  _EXECUTEREADREQUEST._serialized_start=620
-  _EXECUTEREADREQUEST._serialized_end=750
-  _EXECUTEREADREPLY._serialized_start=753
-  _EXECUTEREADREPLY._serialized_end=889
-  _EXECUTEWRITEREQUEST._serialized_start=892
-  _EXECUTEWRITEREQUEST._serialized_end=1023
-  _EXECUTEWRITEREPLY._serialized_start=1025
-  _EXECUTEWRITEREPLY._serialized_end=1142
-  _HASTABLEREQUEST._serialized_start=1144
-  _HASTABLEREQUEST._serialized_end=1246
-  _HASTABLEREPLY._serialized_start=1248
-  _HASTABLEREPLY._serialized_end=1330
-  _GENERATECONTRACTREQUEST._serialized_start=1333
-  _GENERATECONTRACTREQUEST._serialized_end=1493
-  _GENERATECONTRACTREPLY._serialized_start=1495
-  _GENERATECONTRACTREPLY._serialized_end=1606
-  _SETLOGICALSTORAGEPOLICYREQUEST._serialized_start=1609
-  _SETLOGICALSTORAGEPOLICYREQUEST._serialized_end=1746
-  _SETLOGICALSTORAGEPOLICYREPLY._serialized_start=1748
-  _SETLOGICALSTORAGEPOLICYREPLY._serialized_end=1866
-  _GETLOGICALSTORAGEPOLICYREQUEST._serialized_start=1868
-  _GETLOGICALSTORAGEPOLICYREQUEST._serialized_end=1985
-  _GETLOGICALSTORAGEPOLICYREPLY._serialized_start=1987
-  _GETLOGICALSTORAGEPOLICYREPLY._serialized_end=2086
-  _EXECUTECOOPERATIVEREADREQUEST._serialized_start=2089
-  _EXECUTECOOPERATIVEREADREQUEST._serialized_end=2246
-  _EXECUTECOOPERATIVEREADREPLY._serialized_start=2249
-  _EXECUTECOOPERATIVEREADREPLY._serialized_end=2396
-  _EXECUTECOOPERATIVEWRITEREQUEST._serialized_start=2399
-  _EXECUTECOOPERATIVEWRITEREQUEST._serialized_end=2579
-  _EXECUTECOOPERATIVEWRITEREPLY._serialized_start=2582
-  _EXECUTECOOPERATIVEWRITEREPLY._serialized_end=2710
-  _ADDPARTICIPANTREQUEST._serialized_start=2713
-  _ADDPARTICIPANTREQUEST._serialized_end=2851
-  _ADDPARTICIPANTREPLY._serialized_start=2853
-  _ADDPARTICIPANTREPLY._serialized_end=2962
-  _VIEWPENDINGCONTRACTSREQUEST._serialized_start=2964
-  _VIEWPENDINGCONTRACTSREQUEST._serialized_end=3037
-  _VIEWPENDINGCONTRACTSREPLY._serialized_start=3039
-  _VIEWPENDINGCONTRACTSREPLY._serialized_end=3151
-  _ACCEPTPENDINGCONTRACTREQUEST._serialized_start=3153
-  _ACCEPTPENDINGCONTRACTREQUEST._serialized_end=3246
-  _ACCEPTPENDINGCONTRACTREPLY._serialized_start=3248
-  _ACCEPTPENDINGCONTRACTREPLY._serialized_end=3364
-  _REJECTPENDINGCONTRACTREQUEST._serialized_start=3366
-  _REJECTPENDINGCONTRACTREQUEST._serialized_end=3459
-  _REJECTPENDINGCONTRACTREPLY._serialized_start=3461
-  _REJECTPENDINGCONTRACTREPLY._serialized_end=3577
-  _ENABLECOOOPERATIVEFEATURESREQUEST._serialized_start=3579
-  _ENABLECOOOPERATIVEFEATURESREQUEST._serialized_end=3680
-  _ENABLECOOOPERATIVEFEATURESREPLY._serialized_start=3682
-  _ENABLECOOOPERATIVEFEATURESREPLY._serialized_end=3803
-  _CREATETABLEREQUEST._serialized_start=3806
-  _CREATETABLEREQUEST._serialized_end=3971
-  _CREATETABLERESULT._serialized_start=3974
-  _CREATETABLERESULT._serialized_end=4165
-  _INSERTROWREQUEST._serialized_start=4168
-  _INSERTROWREQUEST._serialized_end=4430
-  _INSERTROWRESULT._serialized_start=4433
-  _INSERTROWRESULT._serialized_end=4637
-  _UPDATEROWINTABLEREQUEST._serialized_start=4640
-  _UPDATEROWINTABLEREQUEST._serialized_end=4917
-  _UPDATEROWINTABLERESULT._serialized_start=4920
-  _UPDATEROWINTABLERESULT._serialized_end=5167
-  _GETROWSFROMTABLEREQUEST._serialized_start=5170
-  _GETROWSFROMTABLEREQUEST._serialized_end=5397
-  _GETROWSFROMTABLERESULT._serialized_start=5400
-  _GETROWSFROMTABLERESULT._serialized_end=5652
-  _GETROWFROMPARTIALDATABASEREQUEST._serialized_start=5655
-  _GETROWFROMPARTIALDATABASEREQUEST._serialized_end=5824
-  _GETROWFROMPARTIALDATABASERESULT._serialized_start=5827
-  _GETROWFROMPARTIALDATABASERESULT._serialized_end=5979
-  _SAVECONTRACTREQUEST._serialized_start=5981
-  _SAVECONTRACTREQUEST._serialized_end=6078
-  _SAVECONTRACTRESULT._serialized_start=6080
-  _SAVECONTRACTRESULT._serialized_end=6139
-  _PARTICIPANTACCEPTSCONTRACTREQUEST._serialized_start=6142
-  _PARTICIPANTACCEPTSCONTRACTREQUEST._serialized_end=6303
-  _PARTICIPANTACCEPTSCONTRACTRESULT._serialized_start=6305
-  _PARTICIPANTACCEPTSCONTRACTRESULT._serialized_end=6403
-  _REMOVEROWFROMPARTIALDATABASEREQUEST._serialized_start=6406
-  _REMOVEROWFROMPARTIALDATABASEREQUEST._serialized_end=6578
-  _REMOVEROWFROMPARTIALDATABASERESULT._serialized_start=6581
-  _REMOVEROWFROMPARTIALDATABASERESULT._serialized_end=6711
-  _UPDATEROWDATAHASHFORHOSTREQUEST._serialized_start=6714
-  _UPDATEROWDATAHASHFORHOSTREQUEST._serialized_end=6982
-  _UPDATEROWDATAHASHFORHOSTRESPONSE._serialized_start=6984
-  _UPDATEROWDATAHASHFORHOSTRESPONSE._serialized_end=7089
-  _NOTIFYHOSTOFREMOVEDROWREQUEST._serialized_start=7092
-  _NOTIFYHOSTOFREMOVEDROWREQUEST._serialized_end=7332
-  _NOTIFYHOSTOFREMOVEDROWRESPONSE._serialized_start=7334
-  _NOTIFYHOSTOFREMOVEDROWRESPONSE._serialized_end=7437
-  _TESTREQUEST._serialized_start=7440
-  _TESTREQUEST._serialized_end=7610
-  _TESTREPLY._serialized_start=7612
-  _TESTREPLY._serialized_end=7671
-  _MESSAGEINFO._serialized_start=7673
-  _MESSAGEINFO._serialized_end=7790
-  _AUTHREQUEST._serialized_start=7792
-  _AUTHREQUEST._serialized_end=7866
-  _AUTHRESULT._serialized_start=7868
-  _AUTHRESULT._serialized_end=7969
-  _CREATEDATABASEREQUEST._serialized_start=7972
-  _CREATEDATABASEREQUEST._serialized_end=8101
-  _CREATEDATABASERESULT._serialized_start=8104
-  _CREATEDATABASERESULT._serialized_end=8262
-  _ROW._serialized_start=8265
-  _ROW._serialized_end=8427
-  _ROWVALUE._serialized_start=8429
-  _ROWVALUE._serialized_end=8512
-  _ROWREMOTEMETADATA._serialized_start=8515
-  _ROWREMOTEMETADATA._serialized_end=8651
-  _COLUMNSCHEMA._serialized_start=8654
-  _COLUMNSCHEMA._serialized_end=8824
-  _CONTRACT._serialized_start=8827
-  _CONTRACT._serialized_end=8991
-  _PARTICIPANT._serialized_start=8994
-  _PARTICIPANT._serialized_end=9130
-  _HOST._serialized_start=9132
-  _HOST._serialized_end=9257
-  _DATABASESCHEMA._serialized_start=9259
-  _DATABASESCHEMA._serialized_end=9353
-  _TABLESCHEMA._serialized_start=9356
-  _TABLESCHEMA._serialized_end=9515
-  _TRANSACTIONINFO._serialized_start=9517
-  _TRANSACTIONINFO._serialized_end=9587
-  _ROWPARTICIPANTADDRESS._serialized_start=9589
-  _ROWPARTICIPANTADDRESS._serialized_end=9705
-  _SQLCLIENT._serialized_start=9708
-  _SQLCLIENT._serialized_end=11124
-  _DATASERVICE._serialized_start=11127
-  _DATASERVICE._serialized_end=12202
+  _TRYAUTHATPARTICIPANTREQUEST._serialized_start=23
+  _TRYAUTHATPARTICIPANTREQUEST._serialized_end=161
+  _TRYAUTHATPARTIPANTREPLY._serialized_start=163
+  _TRYAUTHATPARTIPANTREPLY._serialized_end=276
+  _CHANGEHOSTSTATUSREQUEST._serialized_start=278
+  _CHANGEHOSTSTATUSREQUEST._serialized_end=398
+  _CHANGEHOSTSTATUSREPLY._serialized_start=400
+  _CHANGEHOSTSTATUSREPLY._serialized_end=510
+  _GENERATEHOSTINFOREQUEST._serialized_start=512
+  _GENERATEHOSTINFOREQUEST._serialized_end=599
+  _GENERATEHOSTINFOREPLY._serialized_start=601
+  _GENERATEHOSTINFOREPLY._serialized_end=695
+  _SENDPARTICIPANTCONTRACTREQUEST._serialized_start=697
+  _SENDPARTICIPANTCONTRACTREQUEST._serialized_end=821
+  _SENDPARTICIPANTCONTRACTREPLY._serialized_start=823
+  _SENDPARTICIPANTCONTRACTREPLY._serialized_end=935
+  _STATEMENTRESULTSET._serialized_start=938
+  _STATEMENTRESULTSET._serialized_end=1085
+  _CREATEUSERDATABASEREQUEST._serialized_start=1087
+  _CREATEUSERDATABASEREQUEST._serialized_end=1180
+  _CREATEUSERDATABASEREPLY._serialized_start=1182
+  _CREATEUSERDATABASEREPLY._serialized_end=1292
+  _EXECUTEREADREQUEST._serialized_start=1295
+  _EXECUTEREADREQUEST._serialized_end=1425
+  _EXECUTEREADREPLY._serialized_start=1428
+  _EXECUTEREADREPLY._serialized_end=1564
+  _EXECUTEWRITEREQUEST._serialized_start=1567
+  _EXECUTEWRITEREQUEST._serialized_end=1698
+  _EXECUTEWRITEREPLY._serialized_start=1700
+  _EXECUTEWRITEREPLY._serialized_end=1817
+  _HASTABLEREQUEST._serialized_start=1819
+  _HASTABLEREQUEST._serialized_end=1921
+  _HASTABLEREPLY._serialized_start=1923
+  _HASTABLEREPLY._serialized_end=2005
+  _GENERATECONTRACTREQUEST._serialized_start=2008
+  _GENERATECONTRACTREQUEST._serialized_end=2168
+  _GENERATECONTRACTREPLY._serialized_start=2170
+  _GENERATECONTRACTREPLY._serialized_end=2281
+  _SETLOGICALSTORAGEPOLICYREQUEST._serialized_start=2284
+  _SETLOGICALSTORAGEPOLICYREQUEST._serialized_end=2421
+  _SETLOGICALSTORAGEPOLICYREPLY._serialized_start=2423
+  _SETLOGICALSTORAGEPOLICYREPLY._serialized_end=2541
+  _GETLOGICALSTORAGEPOLICYREQUEST._serialized_start=2543
+  _GETLOGICALSTORAGEPOLICYREQUEST._serialized_end=2660
+  _GETLOGICALSTORAGEPOLICYREPLY._serialized_start=2662
+  _GETLOGICALSTORAGEPOLICYREPLY._serialized_end=2761
+  _EXECUTECOOPERATIVEWRITEREQUEST._serialized_start=2764
+  _EXECUTECOOPERATIVEWRITEREQUEST._serialized_end=2965
+  _EXECUTECOOPERATIVEWRITEREPLY._serialized_start=2968
+  _EXECUTECOOPERATIVEWRITEREPLY._serialized_end=3096
+  _ADDPARTICIPANTREQUEST._serialized_start=3099
+  _ADDPARTICIPANTREQUEST._serialized_end=3237
+  _ADDPARTICIPANTREPLY._serialized_start=3239
+  _ADDPARTICIPANTREPLY._serialized_end=3348
+  _VIEWPENDINGCONTRACTSREQUEST._serialized_start=3350
+  _VIEWPENDINGCONTRACTSREQUEST._serialized_end=3423
+  _VIEWPENDINGCONTRACTSREPLY._serialized_start=3425
+  _VIEWPENDINGCONTRACTSREPLY._serialized_end=3537
+  _ACCEPTPENDINGCONTRACTREQUEST._serialized_start=3539
+  _ACCEPTPENDINGCONTRACTREQUEST._serialized_end=3632
+  _ACCEPTPENDINGCONTRACTREPLY._serialized_start=3634
+  _ACCEPTPENDINGCONTRACTREPLY._serialized_end=3750
+  _REJECTPENDINGCONTRACTREQUEST._serialized_start=3752
+  _REJECTPENDINGCONTRACTREQUEST._serialized_end=3845
+  _REJECTPENDINGCONTRACTREPLY._serialized_start=3847
+  _REJECTPENDINGCONTRACTREPLY._serialized_end=3963
+  _ENABLECOOOPERATIVEFEATURESREQUEST._serialized_start=3965
+  _ENABLECOOOPERATIVEFEATURESREQUEST._serialized_end=4066
+  _ENABLECOOOPERATIVEFEATURESREPLY._serialized_start=4068
+  _ENABLECOOOPERATIVEFEATURESREPLY._serialized_end=4189
+  _TRYAUTHREQUEST._serialized_start=4191
+  _TRYAUTHREQUEST._serialized_end=4251
+  _TRYAUTHRESULT._serialized_start=4253
+  _TRYAUTHRESULT._serialized_end=4317
+  _CREATETABLEREQUEST._serialized_start=4320
+  _CREATETABLEREQUEST._serialized_end=4485
+  _CREATETABLERESULT._serialized_start=4488
+  _CREATETABLERESULT._serialized_end=4679
+  _ROWINFO._serialized_start=4681
+  _ROWINFO._serialized_end=4764
+  _INSERTDATAREQUEST._serialized_start=4766
+  _INSERTDATAREQUEST._serialized_end=4883
+  _INSERTDATARESULT._serialized_start=4886
+  _INSERTDATARESULT._serialized_end=5025
+  _UPDATEDATAREQUEST._serialized_start=5028
+  _UPDATEDATAREQUEST._serialized_end=5166
+  _UPDATEDATARESULT._serialized_start=5169
+  _UPDATEDATARESULT._serialized_end=5305
+  _DELETEDATAREQUEST._serialized_start=5308
+  _DELETEDATAREQUEST._serialized_end=5446
+  _DELETEDATARESULT._serialized_start=5449
+  _DELETEDATARESULT._serialized_end=5585
+  _GETROWFROMPARTIALDATABASEREQUEST._serialized_start=5588
+  _GETROWFROMPARTIALDATABASEREQUEST._serialized_end=5757
+  _GETROWFROMPARTIALDATABASERESULT._serialized_start=5760
+  _GETROWFROMPARTIALDATABASERESULT._serialized_end=5912
+  _SAVECONTRACTREQUEST._serialized_start=5914
+  _SAVECONTRACTREQUEST._serialized_end=6011
+  _SAVECONTRACTRESULT._serialized_start=6013
+  _SAVECONTRACTRESULT._serialized_end=6072
+  _PARTICIPANTACCEPTSCONTRACTREQUEST._serialized_start=6075
+  _PARTICIPANTACCEPTSCONTRACTREQUEST._serialized_end=6265
+  _PARTICIPANTACCEPTSCONTRACTRESULT._serialized_start=6267
+  _PARTICIPANTACCEPTSCONTRACTRESULT._serialized_end=6365
+  _UPDATEROWDATAHASHFORHOSTREQUEST._serialized_start=6368
+  _UPDATEROWDATAHASHFORHOSTREQUEST._serialized_end=6636
+  _UPDATEROWDATAHASHFORHOSTRESPONSE._serialized_start=6638
+  _UPDATEROWDATAHASHFORHOSTRESPONSE._serialized_end=6743
+  _NOTIFYHOSTOFREMOVEDROWREQUEST._serialized_start=6746
+  _NOTIFYHOSTOFREMOVEDROWREQUEST._serialized_end=6986
+  _NOTIFYHOSTOFREMOVEDROWRESPONSE._serialized_start=6988
+  _NOTIFYHOSTOFREMOVEDROWRESPONSE._serialized_end=7091
+  _TESTREQUEST._serialized_start=7094
+  _TESTREQUEST._serialized_end=7264
+  _TESTREPLY._serialized_start=7266
+  _TESTREPLY._serialized_end=7325
+  _MESSAGEINFO._serialized_start=7327
+  _MESSAGEINFO._serialized_end=7444
+  _AUTHREQUEST._serialized_start=7446
+  _AUTHREQUEST._serialized_end=7520
+  _AUTHRESULT._serialized_start=7522
+  _AUTHRESULT._serialized_end=7623
+  _CREATEDATABASEREQUEST._serialized_start=7626
+  _CREATEDATABASEREQUEST._serialized_end=7756
+  _CREATEDATABASERESULT._serialized_start=7759
+  _CREATEDATABASERESULT._serialized_end=7917
+  _ROW._serialized_start=7920
+  _ROW._serialized_end=8100
+  _ROWVALUE._serialized_start=8102
+  _ROWVALUE._serialized_end=8206
+  _ROWREMOTEMETADATA._serialized_start=8209
+  _ROWREMOTEMETADATA._serialized_end=8345
+  _COLUMNSCHEMA._serialized_start=8348
+  _COLUMNSCHEMA._serialized_end=8518
+  _CONTRACT._serialized_start=8521
+  _CONTRACT._serialized_end=8685
+  _PARTICIPANT._serialized_start=8688
+  _PARTICIPANT._serialized_end=8824
+  _HOST._serialized_start=8826
+  _HOST._serialized_end=8951
+  _DATABASESCHEMA._serialized_start=8953
+  _DATABASESCHEMA._serialized_end=9047
+  _TABLESCHEMA._serialized_start=9050
+  _TABLESCHEMA._serialized_end=9209
+  _TRANSACTIONINFO._serialized_start=9211
+  _TRANSACTIONINFO._serialized_end=9281
+  _ROWPARTICIPANTADDRESS._serialized_start=9283
+  _ROWPARTICIPANTADDRESS._serialized_end=9362
+  _SQLCLIENT._serialized_start=9365
+  _SQLCLIENT._serialized_end=10937
+  _DATASERVICE._serialized_start=10940
+  _DATASERVICE._serialized_end=11946
 # @@protoc_insertion_point(module_scope)

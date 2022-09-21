@@ -35,11 +35,6 @@ class SQLClientStub(object):
                 request_serializer=cdata__pb2.ExecuteReadRequest.SerializeToString,
                 response_deserializer=cdata__pb2.ExecuteReadReply.FromString,
                 )
-        self.ExecuteCooperativeRead = channel.unary_unary(
-                '/cdata.SQLClient/ExecuteCooperativeRead',
-                request_serializer=cdata__pb2.ExecuteCooperativeReadRequest.SerializeToString,
-                response_deserializer=cdata__pb2.ExecuteCooperativeReadReply.FromString,
-                )
         self.ExecuteWrite = channel.unary_unary(
                 '/cdata.SQLClient/ExecuteWrite',
                 request_serializer=cdata__pb2.ExecuteWriteRequest.SerializeToString,
@@ -95,6 +90,21 @@ class SQLClientStub(object):
                 request_serializer=cdata__pb2.RejectPendingContractRequest.SerializeToString,
                 response_deserializer=cdata__pb2.RejectPendingContractReply.FromString,
                 )
+        self.GenerateHostInfo = channel.unary_unary(
+                '/cdata.SQLClient/GenerateHostInfo',
+                request_serializer=cdata__pb2.GenerateHostInfoRequest.SerializeToString,
+                response_deserializer=cdata__pb2.GenerateHostInfoReply.FromString,
+                )
+        self.ChangeHostStatus = channel.unary_unary(
+                '/cdata.SQLClient/ChangeHostStatus',
+                request_serializer=cdata__pb2.ChangeHostStatusRequest.SerializeToString,
+                response_deserializer=cdata__pb2.ChangeHostStatusReply.FromString,
+                )
+        self.TryAuthAtParticipant = channel.unary_unary(
+                '/cdata.SQLClient/TryAuthAtParticipant',
+                request_serializer=cdata__pb2.TryAuthAtParticipantRequest.SerializeToString,
+                response_deserializer=cdata__pb2.TryAuthAtPartipantReply.FromString,
+                )
 
 
 class SQLClientServicer(object):
@@ -120,12 +130,6 @@ class SQLClientServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ExecuteRead(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def ExecuteCooperativeRead(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -197,6 +201,24 @@ class SQLClientServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GenerateHostInfo(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ChangeHostStatus(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def TryAuthAtParticipant(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_SQLClientServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -219,11 +241,6 @@ def add_SQLClientServicer_to_server(servicer, server):
                     servicer.ExecuteRead,
                     request_deserializer=cdata__pb2.ExecuteReadRequest.FromString,
                     response_serializer=cdata__pb2.ExecuteReadReply.SerializeToString,
-            ),
-            'ExecuteCooperativeRead': grpc.unary_unary_rpc_method_handler(
-                    servicer.ExecuteCooperativeRead,
-                    request_deserializer=cdata__pb2.ExecuteCooperativeReadRequest.FromString,
-                    response_serializer=cdata__pb2.ExecuteCooperativeReadReply.SerializeToString,
             ),
             'ExecuteWrite': grpc.unary_unary_rpc_method_handler(
                     servicer.ExecuteWrite,
@@ -279,6 +296,21 @@ def add_SQLClientServicer_to_server(servicer, server):
                     servicer.RejectPendingContract,
                     request_deserializer=cdata__pb2.RejectPendingContractRequest.FromString,
                     response_serializer=cdata__pb2.RejectPendingContractReply.SerializeToString,
+            ),
+            'GenerateHostInfo': grpc.unary_unary_rpc_method_handler(
+                    servicer.GenerateHostInfo,
+                    request_deserializer=cdata__pb2.GenerateHostInfoRequest.FromString,
+                    response_serializer=cdata__pb2.GenerateHostInfoReply.SerializeToString,
+            ),
+            'ChangeHostStatus': grpc.unary_unary_rpc_method_handler(
+                    servicer.ChangeHostStatus,
+                    request_deserializer=cdata__pb2.ChangeHostStatusRequest.FromString,
+                    response_serializer=cdata__pb2.ChangeHostStatusReply.SerializeToString,
+            ),
+            'TryAuthAtParticipant': grpc.unary_unary_rpc_method_handler(
+                    servicer.TryAuthAtParticipant,
+                    request_deserializer=cdata__pb2.TryAuthAtParticipantRequest.FromString,
+                    response_serializer=cdata__pb2.TryAuthAtPartipantReply.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -356,23 +388,6 @@ class SQLClient(object):
         return grpc.experimental.unary_unary(request, target, '/cdata.SQLClient/ExecuteRead',
             cdata__pb2.ExecuteReadRequest.SerializeToString,
             cdata__pb2.ExecuteReadReply.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def ExecuteCooperativeRead(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/cdata.SQLClient/ExecuteCooperativeRead',
-            cdata__pb2.ExecuteCooperativeReadRequest.SerializeToString,
-            cdata__pb2.ExecuteCooperativeReadReply.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -563,6 +578,57 @@ class SQLClient(object):
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
+    @staticmethod
+    def GenerateHostInfo(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cdata.SQLClient/GenerateHostInfo',
+            cdata__pb2.GenerateHostInfoRequest.SerializeToString,
+            cdata__pb2.GenerateHostInfoReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def ChangeHostStatus(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cdata.SQLClient/ChangeHostStatus',
+            cdata__pb2.ChangeHostStatusRequest.SerializeToString,
+            cdata__pb2.ChangeHostStatusReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TryAuthAtParticipant(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cdata.SQLClient/TryAuthAtParticipant',
+            cdata__pb2.TryAuthAtParticipantRequest.SerializeToString,
+            cdata__pb2.TryAuthAtPartipantReply.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
 
 class DataServiceStub(object):
     """a service for communication between different rcd stores
@@ -589,20 +655,20 @@ class DataServiceStub(object):
                 request_serializer=cdata__pb2.CreateTableRequest.SerializeToString,
                 response_deserializer=cdata__pb2.CreateTableResult.FromString,
                 )
-        self.InsertRowIntoTable = channel.unary_unary(
-                '/cdata.DataService/InsertRowIntoTable',
-                request_serializer=cdata__pb2.InsertRowRequest.SerializeToString,
-                response_deserializer=cdata__pb2.InsertRowResult.FromString,
+        self.InsertCommandIntoTable = channel.unary_unary(
+                '/cdata.DataService/InsertCommandIntoTable',
+                request_serializer=cdata__pb2.InsertDataRequest.SerializeToString,
+                response_deserializer=cdata__pb2.InsertDataResult.FromString,
                 )
-        self.UpdateRowInTable = channel.unary_unary(
-                '/cdata.DataService/UpdateRowInTable',
-                request_serializer=cdata__pb2.UpdateRowInTableRequest.SerializeToString,
-                response_deserializer=cdata__pb2.UpdateRowInTableResult.FromString,
+        self.UpdateCommandIntoTable = channel.unary_unary(
+                '/cdata.DataService/UpdateCommandIntoTable',
+                request_serializer=cdata__pb2.UpdateDataRequest.SerializeToString,
+                response_deserializer=cdata__pb2.UpdateDataResult.FromString,
                 )
-        self.GetRowsFromTable = channel.unary_unary(
-                '/cdata.DataService/GetRowsFromTable',
-                request_serializer=cdata__pb2.GetRowsFromTableRequest.SerializeToString,
-                response_deserializer=cdata__pb2.GetRowsFromTableResult.FromString,
+        self.DeleteCommandIntoTable = channel.unary_unary(
+                '/cdata.DataService/DeleteCommandIntoTable',
+                request_serializer=cdata__pb2.DeleteDataRequest.SerializeToString,
+                response_deserializer=cdata__pb2.DeleteDataResult.FromString,
                 )
         self.GetRowFromPartialDatabase = channel.unary_unary(
                 '/cdata.DataService/GetRowFromPartialDatabase',
@@ -619,11 +685,6 @@ class DataServiceStub(object):
                 request_serializer=cdata__pb2.ParticipantAcceptsContractRequest.SerializeToString,
                 response_deserializer=cdata__pb2.ParticipantAcceptsContractResult.FromString,
                 )
-        self.RemoveRowFromPartialDatabase = channel.unary_unary(
-                '/cdata.DataService/RemoveRowFromPartialDatabase',
-                request_serializer=cdata__pb2.RemoveRowFromPartialDatabaseRequest.SerializeToString,
-                response_deserializer=cdata__pb2.RemoveRowFromPartialDatabaseResult.FromString,
-                )
         self.UpdateRowDataHashForHost = channel.unary_unary(
                 '/cdata.DataService/UpdateRowDataHashForHost',
                 request_serializer=cdata__pb2.UpdateRowDataHashForHostRequest.SerializeToString,
@@ -633,6 +694,11 @@ class DataServiceStub(object):
                 '/cdata.DataService/NotifyHostOfRemovedRow',
                 request_serializer=cdata__pb2.NotifyHostOfRemovedRowRequest.SerializeToString,
                 response_deserializer=cdata__pb2.NotifyHostOfRemovedRowResponse.FromString,
+                )
+        self.TryAuth = channel.unary_unary(
+                '/cdata.DataService/TryAuth',
+                request_serializer=cdata__pb2.TryAuthRequest.SerializeToString,
+                response_deserializer=cdata__pb2.TryAuthResult.FromString,
                 )
 
 
@@ -658,19 +724,19 @@ class DataServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def InsertRowIntoTable(self, request, context):
+    def InsertCommandIntoTable(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def UpdateRowInTable(self, request, context):
+    def UpdateCommandIntoTable(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def GetRowsFromTable(self, request, context):
+    def DeleteCommandIntoTable(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -694,12 +760,6 @@ class DataServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def RemoveRowFromPartialDatabase(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
     def UpdateRowDataHashForHost(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -707,6 +767,12 @@ class DataServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def NotifyHostOfRemovedRow(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def TryAuth(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -730,20 +796,20 @@ def add_DataServiceServicer_to_server(servicer, server):
                     request_deserializer=cdata__pb2.CreateTableRequest.FromString,
                     response_serializer=cdata__pb2.CreateTableResult.SerializeToString,
             ),
-            'InsertRowIntoTable': grpc.unary_unary_rpc_method_handler(
-                    servicer.InsertRowIntoTable,
-                    request_deserializer=cdata__pb2.InsertRowRequest.FromString,
-                    response_serializer=cdata__pb2.InsertRowResult.SerializeToString,
+            'InsertCommandIntoTable': grpc.unary_unary_rpc_method_handler(
+                    servicer.InsertCommandIntoTable,
+                    request_deserializer=cdata__pb2.InsertDataRequest.FromString,
+                    response_serializer=cdata__pb2.InsertDataResult.SerializeToString,
             ),
-            'UpdateRowInTable': grpc.unary_unary_rpc_method_handler(
-                    servicer.UpdateRowInTable,
-                    request_deserializer=cdata__pb2.UpdateRowInTableRequest.FromString,
-                    response_serializer=cdata__pb2.UpdateRowInTableResult.SerializeToString,
+            'UpdateCommandIntoTable': grpc.unary_unary_rpc_method_handler(
+                    servicer.UpdateCommandIntoTable,
+                    request_deserializer=cdata__pb2.UpdateDataRequest.FromString,
+                    response_serializer=cdata__pb2.UpdateDataResult.SerializeToString,
             ),
-            'GetRowsFromTable': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetRowsFromTable,
-                    request_deserializer=cdata__pb2.GetRowsFromTableRequest.FromString,
-                    response_serializer=cdata__pb2.GetRowsFromTableResult.SerializeToString,
+            'DeleteCommandIntoTable': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteCommandIntoTable,
+                    request_deserializer=cdata__pb2.DeleteDataRequest.FromString,
+                    response_serializer=cdata__pb2.DeleteDataResult.SerializeToString,
             ),
             'GetRowFromPartialDatabase': grpc.unary_unary_rpc_method_handler(
                     servicer.GetRowFromPartialDatabase,
@@ -760,11 +826,6 @@ def add_DataServiceServicer_to_server(servicer, server):
                     request_deserializer=cdata__pb2.ParticipantAcceptsContractRequest.FromString,
                     response_serializer=cdata__pb2.ParticipantAcceptsContractResult.SerializeToString,
             ),
-            'RemoveRowFromPartialDatabase': grpc.unary_unary_rpc_method_handler(
-                    servicer.RemoveRowFromPartialDatabase,
-                    request_deserializer=cdata__pb2.RemoveRowFromPartialDatabaseRequest.FromString,
-                    response_serializer=cdata__pb2.RemoveRowFromPartialDatabaseResult.SerializeToString,
-            ),
             'UpdateRowDataHashForHost': grpc.unary_unary_rpc_method_handler(
                     servicer.UpdateRowDataHashForHost,
                     request_deserializer=cdata__pb2.UpdateRowDataHashForHostRequest.FromString,
@@ -774,6 +835,11 @@ def add_DataServiceServicer_to_server(servicer, server):
                     servicer.NotifyHostOfRemovedRow,
                     request_deserializer=cdata__pb2.NotifyHostOfRemovedRowRequest.FromString,
                     response_serializer=cdata__pb2.NotifyHostOfRemovedRowResponse.SerializeToString,
+            ),
+            'TryAuth': grpc.unary_unary_rpc_method_handler(
+                    servicer.TryAuth,
+                    request_deserializer=cdata__pb2.TryAuthRequest.FromString,
+                    response_serializer=cdata__pb2.TryAuthResult.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -838,7 +904,7 @@ class DataService(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def InsertRowIntoTable(request,
+    def InsertCommandIntoTable(request,
             target,
             options=(),
             channel_credentials=None,
@@ -848,14 +914,14 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/cdata.DataService/InsertRowIntoTable',
-            cdata__pb2.InsertRowRequest.SerializeToString,
-            cdata__pb2.InsertRowResult.FromString,
+        return grpc.experimental.unary_unary(request, target, '/cdata.DataService/InsertCommandIntoTable',
+            cdata__pb2.InsertDataRequest.SerializeToString,
+            cdata__pb2.InsertDataResult.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def UpdateRowInTable(request,
+    def UpdateCommandIntoTable(request,
             target,
             options=(),
             channel_credentials=None,
@@ -865,14 +931,14 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/cdata.DataService/UpdateRowInTable',
-            cdata__pb2.UpdateRowInTableRequest.SerializeToString,
-            cdata__pb2.UpdateRowInTableResult.FromString,
+        return grpc.experimental.unary_unary(request, target, '/cdata.DataService/UpdateCommandIntoTable',
+            cdata__pb2.UpdateDataRequest.SerializeToString,
+            cdata__pb2.UpdateDataResult.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def GetRowsFromTable(request,
+    def DeleteCommandIntoTable(request,
             target,
             options=(),
             channel_credentials=None,
@@ -882,9 +948,9 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/cdata.DataService/GetRowsFromTable',
-            cdata__pb2.GetRowsFromTableRequest.SerializeToString,
-            cdata__pb2.GetRowsFromTableResult.FromString,
+        return grpc.experimental.unary_unary(request, target, '/cdata.DataService/DeleteCommandIntoTable',
+            cdata__pb2.DeleteDataRequest.SerializeToString,
+            cdata__pb2.DeleteDataResult.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -940,23 +1006,6 @@ class DataService(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def RemoveRowFromPartialDatabase(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/cdata.DataService/RemoveRowFromPartialDatabase',
-            cdata__pb2.RemoveRowFromPartialDatabaseRequest.SerializeToString,
-            cdata__pb2.RemoveRowFromPartialDatabaseResult.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
     def UpdateRowDataHashForHost(request,
             target,
             options=(),
@@ -987,5 +1036,22 @@ class DataService(object):
         return grpc.experimental.unary_unary(request, target, '/cdata.DataService/NotifyHostOfRemovedRow',
             cdata__pb2.NotifyHostOfRemovedRowRequest.SerializeToString,
             cdata__pb2.NotifyHostOfRemovedRowResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TryAuth(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/cdata.DataService/TryAuth',
+            cdata__pb2.TryAuthRequest.SerializeToString,
+            cdata__pb2.TryAuthResult.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
